@@ -3,7 +3,7 @@ local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
     Title = "你的脚本名称（LMPE）",
     Text = "正在加载",
-    Duration = 3, 
+    Duration = 1, 
 })
 print("反挂机开启")
 		local vu = game:GetService("VirtualUser")
