@@ -649,8 +649,8 @@ function OrionLib:MakeWindow(WindowConfig)
 		MainWindow.Visible = false
 		UIHidden = true
 		OrionLib:MakeNotification({
-			Name = "ui颜色By：小凌",
-			Content = "谢谢：空、NN、AA教我改颜色",
+			Name = "LMPEUI已关闭",
+			Content = "如要使用请重新执行!",
 			Time = 5
 		})
 		WindowConfig.CloseCallback()
