@@ -1,9 +1,19 @@
 local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
-    Title = "你的脚本名称（LMPE）",
-    Text = "正在加载",
-    Duration = 1, 
+    Title = "StartOpenUI",
+    Text = "正在启动...",
+    Duration = 3, 
+})
+CoreGui:SetCore("SendNotification", {
+    Title = "StartOpenUI",
+    Text = "正在加载...",
+    Duration = 3, 
+})
+CoreGui:SetCore("SendNotification", {
+    Title = "StartOpenUI",
+    Text = "加载成功🇨🇳",
+    Duration = 2, 
 })
 print("反挂机开启")
 		local vu = game:GetService("VirtualUser")
@@ -16,7 +26,7 @@ local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/latc
 local Window = OrionLib:MakeWindow({Name = "LMPE脚本", HidePremium = false, SaveConfig = true,IntroText = "欢迎使用LMPE脚本", ConfigFolder = "欢迎LMPE脚本"})
 local about = Window:MakeTab({
     Name = "脚本名称",
-    Icon = "rbxassetid://11109742737",
+    Icon = "rbxassetid://4590662766",
     PremiumOnly = false
 })
 
@@ -26,7 +36,7 @@ about:AddParagraph("QQ群 : ","658358286")
 
 local Tab = Window:MakeTab({
   Name = "通用",
-  Icon = "rbxassetid://12493754210",
+  Icon = "rbxassetid://4590662766",
   PremiumOnly = false
   })
 Tab:AddButton({
@@ -63,7 +73,7 @@ end
 })
 local Tab = Window:MakeTab({
   Name = "DOORS脚本",
-  Icon = "rbxassetid://10983763163",
+  Icon = "rbxassetid://4590662766",
   PremiumOnly = false
   })
 Tab:AddButton({
@@ -361,7 +371,7 @@ Tab:AddButton({
 	Name = "APT|DOORS脚本",
 	Callback = function()
 
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/latchmod-cell/LMPE/refs/heads/main/StartOpenUI.txt')))()
 local Window = OrionLib:MakeWindow({IntroText = "“门” 脚本 APT汉化",Name = "“门” APT汉化", HidePremium = false, SaveConfig = true, ConfigFolder = "DoorsSex"})
 if game.PlaceId == 6516141723 then
     OrionLib:MakeNotification({
