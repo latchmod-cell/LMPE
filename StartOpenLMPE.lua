@@ -432,18 +432,15 @@ local CharTab = Window:MakeTab({
 })
 
 local TargetWalkspeed
-CharTab:AddSlider({
-	Name = "速度",
-	Min = 0,
-	Max = 50,
-	Default = 5,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
+CharTab:AddTextbox({
+	Name = "移动速度[Rooms建议调成21]",
+	Default = "", -- 默认值
+	TextDisappear = true,
 	Callback = function(Value)
-		TargetWalkspeed = Value
-	end    
+print("执行(修改移动速度[Rooms建议调成21])")
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+end
 })
-
 local pcl = Instance.new("SpotLight")
 pcl.Brightness = 1
 pcl.Face = Enum.NormalId.Front
@@ -712,6 +709,16 @@ coroutine.resume(NotificationCoroutine)
 OrionLib:Init()
 
 task.wait(2)
+
+end
+})
+DOORS:AddButton({
+	Name = "传送到Rooms无法使用",
+	Callback = function()
+
+local game_id = 2440500124
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
 
 end
 })
