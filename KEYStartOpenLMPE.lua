@@ -44,6 +44,8 @@ local InfoTab = Window:MakeTab({Name = "信息显示", Icon = "rbxassetid://4483
 local GameSpecificTab = Window:MakeTab({Name = "游戏特定", Icon = "rbxassetid://4483345998"})
 local ToolsTab = Window:MakeTab({Name = "工具", Icon = "rbxassetid://4483345998"})
 local SettingsTab = Window:MakeTab({Name = "⚙️ 设置", Icon = "rbxassetid://4483345998"})
+local DoorsScriptTab = Window:MakeTab({Name = "DOORS脚本
+", Icon = "rbxassetid://4483345998"})
 
 -- 全局变量
 local connections = {}
@@ -1521,11 +1523,9 @@ local function countFeatures()
     for _ in pairs(Window) do count = count + 1 end
     return count
 end
-local Tab = Window:MakeTab({
-  Name = "DOORS脚本",
-  Icon = "rbxassetid://10983763163",
-  PremiumOnly = false
-  })
+
+DoorsScriptTab:AddSection({Name = "DOORS脚本"})
+
 Tab:AddButton({
 	Name = "LMPE|DOORS脚本",
 	Callback = function()
@@ -1955,7 +1955,6 @@ task.wait(2)
 
 end
 })
-
 
 -- 显示欢迎消息
 sendNotification("LMPE 脚本中心", "增强版 v2.0 已加载完成！\n共 " .. countFeatures() .. " 个功能可用", 5)
