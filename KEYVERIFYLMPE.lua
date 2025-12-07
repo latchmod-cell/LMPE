@@ -151,7 +151,7 @@ announcement:AddLabel("你的客户端ID:"..game:GetService("RbxAnalyticsService
 announcement:AddLabel("当前服务器ID:"..game.GameId)
 announcement:AddLabel("你的账号年龄:"..game.Players.LocalPlayer.AccountAge)
 announcement:AddLabel("你的账号ID:"..game.Players.LocalPlayer.UserId)
-MainTab:AddLabel("游戏: " .. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
+announcement:AddLabel("游戏: " .. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
 
 print("创建分类(announcement-主页)")
 
@@ -697,6 +697,7 @@ end
 
 
 print("创建分类(DOORS-DOORS)")
+
 
 
 
