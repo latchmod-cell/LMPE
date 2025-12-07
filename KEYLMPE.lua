@@ -108,7 +108,7 @@ VerifyButton.MouseButton1Click:Connect(function()
         
         ScreenGui:Destroy()
         
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/latchmod-cell/LMPE/refs/heads/main/KEYStartOpenLMPE.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/latchmod-cell/LMPE/refs/heads/main/KEYVERIFYLMPE.lua"))()
     else
         StatusLabel.Text = "状态: ❌ 卡密错误"
         StatusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
