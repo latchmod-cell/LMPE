@@ -205,9 +205,8 @@ about:Button("复制服务器名称", function()
     game:GetService("StarterGui"):SetCore("SendNotification",{Title="LMPE脚本中心";Icon="rbxassetid://114514";Text="服务器名称已复制";Duration=3;})
 end)
 
-about:Button("复制脚本学习+制作交流群", function()
-    setclipboard("574149379")
-    game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "LMPE脚本中心"; Icon = "rbxassetid://114514"; Text ="群号已复制"; Duration = 3; })
+about:Button("THEOldLMPE脚本", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/latchmod-cell/LMPE/refs/heads/main/KEYVALIDATELMPE.lua"))()
 end)
 
 local about = UITab2:section("『玩家属性』",true)
