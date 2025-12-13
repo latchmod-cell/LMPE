@@ -512,6 +512,12 @@ GameTab:AddToggle({
     Flag = "ScreechToggle",
     Save = true
 })
+GameTab:AddToggle({
+	Name = "过100门铁盒子Hotel-有用",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Bricks.EBF:FireServer()
+  	end    
+})
 
 GameTab:AddToggle({
 	Name = "取消心跳游戏",
