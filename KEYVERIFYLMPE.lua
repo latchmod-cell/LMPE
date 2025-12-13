@@ -371,49 +371,6 @@ local EntityCoroutine = coroutine.create(function()
     table.insert(FigureChams,ApplyEntityChams(Entity))
 end)
 
-VisualsTab:AddToggle({
-    Name = "ESP门"
-    Callback = function(Value)
-    flags.espdoors = Value
-    
-    if Value then
-        local function setup(room)
-            local door = room:WaitForChild("Door"):WaitForChild("Door")
-            
-            task.wait(0.1)
-            local h = esp(door,Color3.fromRGB(255,240,0),door,"门")
-            table.insert(esptable.doors,h)
-            
-            door:WaitForChild("Open").Played:Connect(function()
-                h.delete()
-            end)
-            
-            door.AncestryChanged:Connect(function()
-                h.delete()
-            end)
-        end
-        
-        local addconnect
-        addconnect = workspace.CurrentRooms.ChildAdded:Connect(function(room)
-            setup(room)
-        end)
-        
-        for i,room in pairs(workspace.CurrentRooms:GetChildren()) do
-            if room:FindFirstChild("Assets") then
-                setup(room) 
-            end
-        end
-        
-        repeat task.wait() until not flags.espdoors
-        addconnect:Disconnect()
-        
-        for i,v in pairs(esptable.doors) do
-            v.delete()
-        end 
-    end
-end)
-})
-
 local GameTab = Window:MakeTab({
 	Name = "主要功能",
 	Icon = "rbxassetid://4483345998",
@@ -573,13 +530,13 @@ GameTab:AddToggle({
     Flag = "MobToggle" ,
     Save = true
 })
-GameTab:AddButton({
+GameTab:AddToggle({
 	Name = "过100门铁盒子Hotel-有用",
 	Callback = function()
         game:GetService("ReplicatedStorage").Bricks.EBF:FireServer()
   	end    
 })
-GameTab:AddButton({
+GameTab:AddToggle({
 	Name = "过50门",
 	Callback = function()
         local CurrentDoor = workspace.CurrentRooms[tostring(LatestRoom+1)]:WaitForChild("Door")
