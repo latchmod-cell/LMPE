@@ -206,7 +206,7 @@ about:Button("复制服务器名称", function()
 end)
 
 about:Button("THEOldLMPE脚本", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/latchmod-cell/LMPE/refs/heads/main/KEYVALIDATELMPE.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/latchmod-cell/LMPE/refs/heads/main/KEYVERIFYLMPE.lua"))()
 end)
 
 local about = UITab2:section("『玩家属性』",true)
