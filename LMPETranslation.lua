@@ -348,6 +348,7 @@ local Translations = {
     ["Ignore"] = "忽略",
     ["This is what a notification will look like."] = "通知就长这样。",
     ["LMPE"] = "LMPE",
+    ["LMHUB"] = "LMHUB",
 }
 
 -- 缓存已翻译的对象
@@ -672,4 +673,4 @@ end
 -- 立即启动
 main()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/latchmod-cell/LMPE/refs/heads/main/LMPECENTER.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/latchmod-cell/LMPE/refs/heads/main/LMHUB.lua"))()
