@@ -59,7 +59,7 @@ Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
 
 local success, ui = pcall(function()
-return loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")()
+return loadstring(game:HttpGet("https://pastebin.com/raw/3vQbADjh"))()
 end)
 if not success then
 game:GetService("StarterGui"):SetCore("SendNotification",{Title="LMPE脚本中心";Text="UI库加载失败";Icon="rbxassetid://114514";Duration=5;})
